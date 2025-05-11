@@ -119,11 +119,11 @@
             </div><!--/ilo-description-->
             <div class="col-sm-12 col-md-5">
               <task-ilo-alignment-rater
-                readonly="false"
-                unit="task.unit"
-                show-zero-rating="true"
-                ng-model="alignments[ilo.id]">
-              </task-ilo-alignment-rater>
+  [(ngModel)]="alignments[ilo.id]"
+  [readonly]="false"
+  [showZeroRating]="true"
+  [unit]="task.unit">
+</task-ilo-alignment-rater>
             </div><!--/alignment-rater-->
           </div>
         </div><!--/alignment-list-group-->
